@@ -14,11 +14,11 @@ app.use("/tasks", tasksRouter)
 
 
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-console.error(err)
-res.status(500).json({ error: "Internal Server Error" })
+    console.error(err)
+    res.status(500).json({ error: "Internal Server Error" })
 })
 
 
 app.listen(PORT, () => {
-console.log(`API listening on http://localhost:${PORT}`)
+    console.log(`API listening on http://localhost:${PORT}`)
 })
