@@ -7,7 +7,7 @@ const router = Router()
 
 // GET /tasks
 router.get("/", async (_req, res) => {
-    const tasks = await prisma.task.findMany({ orderBy: { createdAt: "asc" } })
+    const tasks = await prisma.task.findMany({ orderBy: { id: "asc" } })
     res.json(tasks)
 })
 
